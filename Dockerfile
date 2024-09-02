@@ -19,8 +19,8 @@ WORKDIR /app
 COPY --from=build /app/output .
 
 # Exponer los puertos que la aplicación usará
-EXPOSE 80
-EXPOSE 5001
+EXPOSE 85
+EXPOSE 5002
 
 # Comando de entrada
 ENTRYPOINT ["dotnet", "GameOfLife.dll"]
