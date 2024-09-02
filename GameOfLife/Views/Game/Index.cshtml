@@ -4,53 +4,57 @@
     <h2>Game of Life</h2>
 
     <p>
-        Se trata de un juego de cero jugadores, lo que quiere decir que su evolución está determinada por el estado inicial y no necesita ninguna entrada de datos posterior. 
-        El "tablero de juego" es una malla plana formada por cuadrados (las "células") que se extiende por el infinito en todas las direcciones. 
-        Por tanto, cada célula tiene 8 células "vecinas", que son las que están próximas a ella, incluidas las diagonales. 
-        Las células tienen dos estados: están "vivas" o "muertas" (o "encendidas" y "apagadas"). 
-        El estado de las células evoluciona a lo largo de unidades de tiempo discretas (se podría decir que por turnos). 
-        El estado de todas las células se tiene en cuenta para calcular el estado de las mismas al turno siguiente. 
-        
-        <p>
-        Todas las células se actualizan simultáneamente en cada turno, siguiendo estas reglas:
-        </p>
-        
-        <p>
-        Nace: Si una célula muerta tiene exactamente 3 células vecinas vivas "nace" (es decir, al turno siguiente estará viva).
-        </p>
-        
-        <p>
-        Muere: una célula viva puede morir por uno de 2 casos:
-        Sobrepoblación: si tiene más de tres vecinos alrededor.
-        Aislamiento: si tiene solo un vecino alrededor o ninguno.
-        </p>
-        
-        <p>
-        Vive: una célula se mantiene viva si tiene 2 o 3 vecinos a su alrededor.
-        </p>
-        
+        Imagina un tablero gigante que se extiende por todas partes, como una hoja de papel que nunca termina. 
     </p>
+    <p>
+        Este tablero está lleno de cuadritos, y cada cuadrito puede estar "encendido" o "apagado".
+    </p>
+        <p>
+        Cada cuadrito tiene 8 vecinos alrededor (los cuadritos cercanos, incluso en las esquinas).
+    </p>
+        <p>
+        Cada cierto tiempo, todos los cuadritos miran a sus vecinos para decidir si siguen "encendidos" o se apagan.
+    </p>
+       <p>
+        No necesitas hacer nada más para que el juego siga cambiando; solo empieza con algunos cuadritos encendidos y deja que el juego haga su magia solo.
+    </p>
+       <p>
+        ¡Es como un juego en el que los cuadritos deciden qué hacer cada turno!
+    </p>
+            
+    <details>
+        <summary>Reglas</summary>
+        <strong><p>Para iniciar simplemente selecciona algunos cuadritos y presiona next, mira como evolucionan a lo largo del tiempo y sus vecinos tambien!</p></strong>
+        <p>         
+            Si un cuadrito está encendido:
+            Se apaga si tiene menos de 2 vecinos encendidos o más de 3 vecinos encendidos.
+            Sigue encendido si tiene 2 o 3 vecinos encendidos.
+            
+        </p>
 
+        <p>
+            Si un cuadrito está apagado:
+            Se enciende si tiene exactamente 3 vecinos encendidos.
+        </p>
+        <p>
+            Cambio de Estado: Cada cierto tiempo, los cuadritos miran a sus vecinos y cambian de estado siguiendo estas reglas. Esto se repite una y otra vez.
+        </p>        
+    </details>
+    
 </div>
-
 
 
 <form id="gameForm">
 
     <div style="margin: 5px 5px 5px 5px">
 
-        <h6>
-            Introduce la configuración inicial y presiona el botón para avanzar una generación.
-        </h6>
-
-
-    <button type="button" id="nextGenerationBtn">Next generation</button>
+    <button type="button" id="nextGenerationBtn">Next</button>
     <button type="button" id="resetBtn">Reset</button>
     </div>
 
     <div style="margin: 5px 5px 5px 5px">
         <p>
-            Selecciona el checkbox para avnazar entre generaciones automaitcamente
+            Selecciona el checkbox para avanzar entre generaciones automáticamente
         </p>
         <label>Avanzar automáticamente</label>
         <input type="checkbox" id="autoAdvance" />
