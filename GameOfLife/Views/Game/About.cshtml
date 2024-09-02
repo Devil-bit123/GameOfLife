@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div >
+
+    <div>
+        <h2>Patrones de prueba</h2>
+        <p>
+            Para probar el correcto funcionamiento del juego podemos probar varios patrones.
+        </p>
+    </div>
+    
+    <div>
+    <h6>Estatico</h6>
+        <p>Podemos probar un patron estatico activando 4 celulas en forma de cuadricula</p>
+        <p>y avanzando una generacion, el patron se debera mantener intacto</p>
+    <table style="margin:5px 5px 5px 5px">
+        <tr>
+            <th>Patron</th>
+            <th>Resultado</th>
+            
+        </tr>
+        <tr>
+            <td><img src="/img/block.png" width="50px" /></td>
+            <td><img src="/img/block.png" width="50px" /></td>
+        </tr>
+    </table>
+    </div>
+    <br />
+
+    <div >
+    <h6>Oscilante</h6>
+        <p>Podemos probar un patron oscilante activando 3 celdas en foma de una linea</p>
+        <p>y avanzando una generacion, el patron se debera rotar 90 grados,</p>
+        <p>si avanzamos una generacion mas, el patron se debera rotar 90 grados volviendo a su estado inicial</p>
+        <table style="margin:5px 5px 5px 5px">
+        <tr>
+            <th>Patron</th>
+            <th>Resultado</th>
+
+        </tr>
+        <tr>
+            <td><img src="/img/line.png" width="50px" /></td>
+            <td><img src="/img/line_res.png" width="50px" /></td>
+        </tr>
+    </table>
+    </div>
+
+</div>
